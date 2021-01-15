@@ -19,7 +19,6 @@ class App extends React.Component {
 
     componentDidMount() {
         this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
-            console.log(userAuth);
             if (userAuth) {
                 const userRef = await createUserProfileDocument(userAuth);
 
